@@ -18,12 +18,6 @@
                 <a href="/project_1daw/insertar.php">
                     Insertar
                 </a>
-                <a href="/project_1daw/update.php">
-                    Actualizar
-                </a>
-                <a href="">
-                    Borrar
-                </a>
             </div>
         </nav>
     </man>

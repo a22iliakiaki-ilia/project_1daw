@@ -21,10 +21,10 @@ $videojuegos = $resultado->fetch_all(MYSQLI_ASSOC);?>
                         <td><?php echo $videojuego["nombre"] ?></td>
                         <td><?php echo $videojuego["descripcion"] ?></td>
                         <td>
-                            <a href="editar.php?id=<?php echo $videojuego["id"] ?>">Editar</a>
+                            <a href="update.php?id=<?php echo $videojuego["id"] ?>">Editar</a>
                         </td>
                         <td>
-                            <a href="eliminar.php?id=<?php echo $videojuego["id"] ?>">Eliminar</a>
+                            <a href="delete.php?id=<?php echo $videojuego["id"] ?>">Eliminar</a>
                         </td>
                     </tr>
                 <?php } ?>
