@@ -10,7 +10,7 @@ VALUES
 (?, ?)");
 $sentencia->bind_param("ss", $nombre, $descripcion);
 $sentencia->execute();
-header("Location: listar.php");?>
+header("Location: mostrar.php");?>
 <div class="row">
     <div class="col-12">
         <h1>Registrar videojuego</h1>
