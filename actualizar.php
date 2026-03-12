@@ -1,13 +1,13 @@
 <?php
 $mysqli = include_once "conexion.php";
-$id = $_GET["id"];
-$sentencia = $mysqli->prepare("SELECT id, nombre, descripcion FROM videojuegos WHERE id = ?");
-$sentencia->bind_param("i", $id);
+
+$id = $_POST["id"];
+$nombre = $_POST["nombre"];
+$descripcion = $_POST["descripcion"];
+
+$sentencia = $mysqli->prepare("UPDATE videojuegos SET nombre = ?, descripcion = ? WHERE id = ?");
+$sentencia->bind_param("ssi", $nombre, $descripcion, $id);
 $sentencia->execute();
-$resultado = $sentencia->get_result();
-$videojuego = $resultado->fetch_assoc();
-if (!$videojuego) {
-    exit("No hay resultados para ese ID");
-}
-header("Location: mostrar.php");
+
+header("Location: mostrar.php"); 
 ?>
