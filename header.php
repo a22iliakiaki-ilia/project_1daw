@@ -15,7 +15,7 @@
                 <a href="/project_1daw/mostrar.php">
                     Mostrar
                 </a>
-                <a href="/project_1daw/insertar.php">ç
+                <a href="/project_1daw/insertar.php">
                     Insertar
                 </a>
                 <a href="">
