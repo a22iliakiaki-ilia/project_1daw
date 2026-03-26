@@ -1,7 +1,7 @@
 <?php include_once "header.php"; ?>
 <?php
 $mysqli = include_once "conexion.php";
-$resultado = $mysqli->query("SELECT id, nombre, descripcion FROM videojuegos");
+$resultado = $mysqli->query("SELECT id, nombre, descripcion, tipo FROM videojuegos");
 $videojuegos = $resultado->fetch_all(MYSQLI_ASSOC);?>
 <table class="table">
             <thead>
