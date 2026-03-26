@@ -9,5 +9,9 @@ VALUES
 (?, ?)");
 $sentencia->bind_param("ss", $nombre, $descripcion);
 $sentencia->execute();
-header("Location: mostrar.php");?>
+$id = $mysqli->insert_id; 
+
+header("Location: ticket.php?id=" . $id);
+exit;
+?>
 
