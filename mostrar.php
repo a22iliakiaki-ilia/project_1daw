@@ -33,7 +33,7 @@ $videojuegos = $resultado->fetch_all(MYSQLI_ASSOC);?>
                                     case 'sport':
                                         $color = "yellow";
                                         break;
-                                    case 'action': 
+                                    case 'fight': 
                                         $color = "green";
                                         break;
                                 }
