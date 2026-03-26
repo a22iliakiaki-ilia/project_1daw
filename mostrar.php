@@ -9,6 +9,7 @@ $videojuegos = $resultado->fetch_all(MYSQLI_ASSOC);?>
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
+                    <th>Tipo</th>
                     <th>Editar</th>
                     <th>Eliminar</th>
                 </tr>
@@ -20,6 +21,7 @@ $videojuegos = $resultado->fetch_all(MYSQLI_ASSOC);?>
                         <td><?php echo $videojuego["id"] ?></td>
                         <td><?php echo $videojuego["nombre"] ?></td>
                         <td><?php echo $videojuego["descripcion"] ?></td>
+                        <td><?php echo $videojuego["tipo"] ?></td>
                         <td>
                             <a href="update.php?id=<?php echo $videojuego["id"] ?>">Editar</a>
                         </td>
