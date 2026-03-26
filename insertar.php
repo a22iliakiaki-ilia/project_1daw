@@ -14,10 +14,10 @@
             </div>
             <div class="form-group">
                 <label for="descripcion">Tipo</label>
-                <select name="tipos" id="tipos">
-                    <option value="role">Role</option>
-                    <option value="sport">Sport</option>
-                    <option value="fight">Fight</option>
+                <select name="tipo" id="tipos">
+                    <option  value="role">Role</option>
+                    <option  value="sport">Sport</option>
+                    <option  value="fight">Fight</option>
                 </select>
             </div>
             <div class="form-group"><button class="btn btn-success">Guardar</button></div>
