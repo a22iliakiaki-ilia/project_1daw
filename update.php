@@ -1,7 +1,7 @@
 <?php
 $mysqli = include_once "conexion.php";
 $id = $_GET["id"];
-$sentencia = $mysqli->prepare("SELECT id, nombre, descripcion FROM videojuegos WHERE id = ?");
+$sentencia = $mysqli->prepare("SELECT id, nombre, descripcion, tipo FROM videojuegos WHERE id = ?");
 $sentencia->bind_param("i", $id);
 $sentencia->execute();
 $resultado = $sentencia->get_result();
@@ -27,6 +27,14 @@ include_once "header.php";
             <div class="form-group">
                 <label for="descripcion">Descripción</label>
                 <textarea class="form-control" name="descripcion" id="descripcion" rows="10" required><?php echo $videojuego["descripcion"] ?></textarea>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Tipo</label>
+                <select name="tipo" id="tipos">
+                    <option  value="role">Role</option>
+                    <option  value="sport">Sport</option>
+                    <option  value="fight">Fight</option>
+                </select>
             </div>
             <div class="form-group">
                 <button class="btn btn-success">Guardar cambios</button>
