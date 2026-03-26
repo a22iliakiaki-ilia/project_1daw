@@ -6,7 +6,7 @@ if (!isset($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-$sentencia = $mysqli->prepare("SELECT id, nombre, descripcion FROM videojuegos WHERE id = ?");
+$sentencia = $mysqli->prepare("SELECT id, nombre, descripcion, tipo FROM videojuegos WHERE id = ?");
 $sentencia->bind_param("i", $id);
 $sentencia->execute();
 $resultado = $sentencia->get_result();
@@ -31,6 +31,7 @@ include_once "header.php";
         <ul class="list-group list-group-flush text-start mb-4">
             <li class="list-group-item"><strong>Nombre:</strong> <?php echo htmlspecialchars($videojuego["nombre"]) ?></li>
             <li class="list-group-item"><strong>Descripción:</strong> <?php echo htmlspecialchars($videojuego["descripcion"]) ?></li>
+            <li class="list-group-item"><strong>Descripción:</strong> <?php echo htmlspecialchars($videojuego["tipo"]) ?></li>
         </ul>
 
         <div class="d-grid gap-2 d-md-block">

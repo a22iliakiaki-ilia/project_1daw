@@ -9,7 +9,7 @@ $sentencia = $mysqli->prepare("INSERT INTO videojuegos
 (nombre, descripcion, tipo)
 VALUES
 (?, ?, ?)");
-$sentencia->bind_param("ss", $nombre, $descripcion, $tipo);
+$sentencia->bind_param("sss", $nombre, $descripcion, $tipo);
 $sentencia->execute();
 $id = $mysqli->insert_id; 
 
