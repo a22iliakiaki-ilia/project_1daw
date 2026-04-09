@@ -9,7 +9,8 @@
     <style>
         body { background-color: #f8f9fa; }
         .navbar-brand { font-weight: bold; letter-spacing: 1px; }
-        .nav-link:hover { color: #0d6efd !important; transition: 0.3s; }
+        .nav-link:not(.btn):hover { color: #0d6efd !important; transition: 0.3s; }
+        .nav-link.btn:hover { color: #ffffff !important; transform: scale(1.05); transition: 0.3s; }
     </style>
 </head>
 <body>
